@@ -1,0 +1,464 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display';
+}
+
+
+.container {
+    padding: 10px;
+    margin: 0 auto;
+}
+
+nav {
+    background: #00B2FF;
+    height: 80px;
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        position: relative;
+    
+        .logo {
+          
+               position: absolute;
+               left: 1%;
+
+           h1 {
+              color: #fff;
+              font-size: 30px;
+           }
+
+        }
+    }
+
+    @media only screen and (max-width: 480px){
+        .nav-wrapper  {
+             flex-direction: column;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    
+    li {
+        margin: 50px;
+        
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            transition: 0.6s;
+        }
+
+    }
+
+    a:hover {
+        color: #000000;
+    }
+
+
+}
+
+
+
+.logo {
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+
+.top-social {
+    margin-right: 50px;
+    
+    a {
+        padding: 20px;
+        
+        
+
+        .fa-brands {
+            font-size: 25px;
+            color: #fff;
+            transition: 0.6s;
+        }
+
+        .fa-square-facebook {
+            color: #2f00ff;
+        }
+
+        .fa-square-github {
+            color: #000000;
+        }
+
+        .fa-instagram {
+            color: #ee2a7b;
+        }
+    }
+
+    .fa-brands:hover {
+        color: #ffffff;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header {
+    background-color: #ffffff;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'SF Pro Display';
+    font-size: 20px;
+}
+
+@media only screen and  (max-width: 480px) {
+         .header {
+            margin-left: 30px;
+         }
+}
+
+
+.Content-me {
+    max-width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Home-info {
+        margin-top: 20px;
+        list-style: none;
+        padding: 50px;
+        width: 550px;
+        border-radius: 2rem;
+        background: rgb(230, 229, 229);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .Home-info h1 {
+        margin-bottom: 50px;
+        text-align: center;
+        font-size: 50px;
+        font-family: 'SF Pro Display';
+        font-weight: 700;
+    }
+
+    .Home-info li {
+        font-family: 'Kanit';
+        font-size: 20px;
+        
+    }
+
+
+    @media only screen and  (max-width: 480px) {
+        .Content-me {
+          padding: 10px;
+          max-width: 100%;
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .Home-info {
+            max-width: 100%;
+        }
+
+        .Home-img {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+      }
+}
+
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.Home-img {
+    margin-right: 150px;
+
+    img {
+        border-radius: 2rem;
+        opacity: 0;
+        transform: scale(0.9);
+        max-width: 100%;
+        filter: blur(10px);
+        animation: appear 1s ease-out forwards;
+    }
+
+}
+
+@keyframes appear {
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+    }
+  }
+
+.Home-info h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.Conmail {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.mail {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    a {
+        margin: 10px;
+        font-size: 30px;
+    }
+
+    .fa-brands {
+        font-size: 25px;
+        color: #fff;
+        transition: 0.6s;
+    }
+
+    .fa-square-facebook {
+        color: #2f00ff;
+    }
+
+    .fa-square-github {
+        color: #000000;
+    }
+
+    .fa-instagram {
+        color: #ee2a7b;
+    }
+}
+
+
+.Skill-box {
+    background-color: #ffffff;
+    height: 150px;
+    margin-top: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    border: 3px solid #000;
+    padding: 10px;
+    border-radius: 1rem;
+    margin: 10px;
+
+
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .icon {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 40%;
+        height: 650px;
+    }
+}
+
+
+
+
+/* Hamburger Menu */
+.ham-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu-active1 {
+    display: block ;
+}
+
+
+.menu-active1 {
+    display: block !important;
+}
+
+@media only screen and (min-width: 700px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+      .menu {
+         display: none;
+      }
+
+      .menu {
+        background-color: #00B2FF;
+        border-radius: 1rem;
+        z-index: 1;
+        margin-top: 180px;
+        transform: translateX(130px);
+      }
+
+
+
+    #text {
+        text-align: center;
+    }
+
+    .top-social {
+        display: none;
+    }
+
+    
+    .Content-img {
+        transform: translateX(200px);
+    }
+
+    .Home-img {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .nav-wrapper {
+        padding: 1rem;
+        z-index: 2;
+        height: auto;
+        flex-direction: column;
+     }
+
+
+     .menu-active {
+       display: block;
+   }
+}
+
+.ft1 {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    height: 40px;
+    align-items: center;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 20px;
+}
+
+.ft2 {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    height: 80px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 20px;
+}
+
+
+
+@media only screen and (max-width: 380px) {
+       
+    footer {
+       display: none;
+    }
+
+    .Content-me {
+       width: 850px;
+       height: 100%;
+    }
+
+    .Home-img {
+       width: 40px;
+       z-index: 1;
+       display: none;
+    }
+
+    .Home-info {
+       z-index: 0;
+       width: 100%;
+       position: relative;
+       bottom: -70%;
+       left: -30%;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
